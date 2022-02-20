@@ -20,3 +20,4 @@
   roles:
     - configuracao-default-so
     - role: geerlingguy.mysql
+    
