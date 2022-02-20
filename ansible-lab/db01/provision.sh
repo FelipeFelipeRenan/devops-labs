@@ -1,0 +1,6 @@
+#/bin/sh
+
+echo "Adding ssh"
+cat << EOT >> /home/vagrant/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCo86uo5d/yYViPlID2F+dxlpDytN0AIyI8qBfi9OgcQhb1kOpUiNpfXpC5RW8pXa1p1nTDcQxUxDbgg2TcLlT72nykctaFsSuv07hdsELI5fu0llODlg231l2I5gk+hJtoXRn1irI+WfDIoS7FxtwjOwQGxIykRK5lnIM/cTOm5a1feSadJhA/luWlMt5Pgfb2yNxpN1aC874Z33syqjFOuI3VnQNw5aYTu2HP9O9ED5KxiFGqrjabLkkOPVHCtIlbBADYm/rOuZyW+7iPCgvrWPg48SllsZmKiakvY+cEy9zuvpiZZlG0De8BkGSsa2Ohgwy6yKDBdoZWJdfn2tjb vagrant@control-node
+EOT
