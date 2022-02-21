@@ -5,9 +5,6 @@
   user: vagrant
   become: yes
 
-
-  vars_files:
-    - vars/main.yaml
   vars:
     - dbhost: "db01"
     - dbname: "notes"
@@ -69,19 +66,19 @@
       template:
         src: etc/systemd/system/notes.service
         dest: /etc/systemd/system/notes.service
-        notify: reload daemon
-    - name: Iniciar o serviço Notes
-      service:  
+      notify: reload daemon
+    - name: Iniciar serviço notes
+      service:
         name: notes
         state: restarted
   roles:
-    - configuracao-default-so
+      - configuracao-default-so
   handlers:
     - name: reload app
       systemd:
         state: restarted
-        daemon_reload: yes
-        name: notes
+        daemon_reload: yes 
+        name: 'notes'
     - name: reload daemon
       systemd:
         daemon_reexec: yes
