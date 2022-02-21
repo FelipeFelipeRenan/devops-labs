@@ -8,7 +8,7 @@
   vars:
     - dbhost: "db01"
     - dbname: "notes"
-    - dbusername: "notesapps"
+    - dbusername: "notesapp"
     - dbpassword: "dev123"
   tasks:
     - name: Configurar hosts lab Ansible
@@ -39,6 +39,10 @@
         state: directory
         owner: app
         group: app
+    - name: instalação do git client
+      yum:
+        name: git
+        state: latest
     - name: Clone do repositório Notes - app
       git: 
         repo: 'https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git'
