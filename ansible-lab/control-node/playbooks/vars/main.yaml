@@ -8,3 +8,5 @@ mysql_users:
     hosts: "%"
     password: dev123
     priv: "notes.*:ALL"
+
+# SHA256 sum for the redistributable package (i.e. apache-maven-{{ maven_version }}-bin.tar.gz)
