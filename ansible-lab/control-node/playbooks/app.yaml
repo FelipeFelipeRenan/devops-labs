@@ -62,7 +62,7 @@
       become_user: app
     - name: Registrar versão do pacote
       shell:
-        cmd: mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate =Dexpression=project.version | grep -v '\['
+        cmd: mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | grep -v '\['
         chdir: /opt/notes
       register: app_version
     - name: Cofigurar serviço do SystemD
