@@ -1,6 +1,6 @@
 spring:
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
+
     url: jdbc:mysql://{{dbhost}}:3307/{{dbname}}?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
     username: {{dbusername}}
     password: {{dbpassword}}
