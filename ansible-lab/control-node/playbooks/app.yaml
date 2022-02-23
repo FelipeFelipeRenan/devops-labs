@@ -9,7 +9,7 @@
     - dbhost: "db01"
     - dbname: "notes"
     - dbusername: "notesapp"
-    - dbpassword: "devopsmaonamassa"
+    - dbpassword: "dev123"
   tasks:
     - name: Adicionar usuario de app
       user:
